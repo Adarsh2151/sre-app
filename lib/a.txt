@@ -1,0 +1,274 @@
+
+
+// // ignore: import_of_legacy_library_into_null_safe
+// import 'package:carousel_slider/carousel_slider.dart';
+// import 'package:e_comm/login.dart';
+// import 'package:flutter/material.dart';
+// import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+// class Home extends StatefulWidget {
+//   const Home({Key? key}) : super(key: key);
+
+//   @override
+//   State<Home> createState() => _HomeState();
+// }
+
+// class NavBar extends StatelessWidget {
+//   const NavBar({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Drawer(
+//       child: ListView(
+//         children: [
+//           UserAccountsDrawerHeader(
+//             accountName: const Text("Adarsh Kumar"),
+//             accountEmail: const Text("adarshkuamr@gmail.com"),
+//             currentAccountPicture: CircleAvatar(
+//               child: ClipOval(
+//                   child: Image.network(
+//                 "https://pps.whatsapp.net/v/t61.24694-24/265548843_255814816641926_1223590742774157953_n.jpg?ccb=11-4&oh=65f01234bac3392609b177380367df89&oe=6262EC12",
+//                 width: 100,
+//                 height: 100,
+//               )),
+//             ),
+//           ),
+//           Card(
+//               margin: const EdgeInsets.all(10.0),
+//               shape: RoundedRectangleBorder(
+//                   side: const BorderSide(color: Colors.red, width: 2),
+//                   borderRadius: BorderRadius.circular(8.0)),
+//               shadowColor: Colors.deepPurpleAccent,
+//               child: Row(
+//                 children: [
+//                   const Icon(
+//                     Icons.icecream_rounded,
+//                     size: 40.5,
+//                   ),
+//                   TextButton(
+//                       onPressed: () {}, child: const Text("Our Products ")),
+//                 ],
+//               )),
+//           Card(
+//               margin: const EdgeInsets.all(10.0),
+//               shape: RoundedRectangleBorder(
+//                   side: const BorderSide(color: Colors.red, width: 2),
+//                   borderRadius: BorderRadius.circular(8.0)),
+//               shadowColor: Colors.deepPurpleAccent,
+//               child: Row(
+//                 children: [
+//                   const Icon(
+//                     Icons.design_services_outlined,
+//                     size: 40.5,
+//                   ),
+//                   TextButton(
+//                       onPressed: () {},
+//                       child: const Text("Services & Contacts ")),
+//                 ],
+//               )),
+//           const Divider(
+//             height: 10,
+//           ),
+//           Card(
+//               margin: const EdgeInsets.all(10.0),
+//               shape: RoundedRectangleBorder(
+//                   side: const BorderSide(color: Colors.red, width: 2),
+//                   borderRadius: BorderRadius.circular(8.0)),
+//               shadowColor: Colors.deepPurpleAccent,
+//               child: Row(
+//                 children: [
+//                   const Icon(
+//                     Icons.account_balance,
+//                     size: 40.5,
+//                   ),
+//                   TextButton(
+//                       onPressed: () {}, child: const Text("Transactions")),
+//                 ],
+//               )),
+//           Card(
+//               margin: const EdgeInsets.all(10.0),
+//               shape: RoundedRectangleBorder(
+//                   side: const BorderSide(color: Colors.red, width: 2),
+//                   borderRadius: BorderRadius.circular(8.0)),
+//               shadowColor: Colors.deepPurpleAccent,
+//               child: Row(
+//                 children: [
+//                   const Icon(
+//                     Icons.analytics,
+//                     size: 40.5,
+//                   ),
+//                   TextButton(
+//                       onPressed: () {},
+//                       child: const Text("Bussiness Analytics")),
+//                 ],
+//               )),
+//           const Divider(
+//             height: 10,
+//           ),
+//           Card(
+//               margin: const EdgeInsets.all(10.0),
+//               shape: RoundedRectangleBorder(
+//                   side: const BorderSide(color: Colors.red, width: 2),
+//                   borderRadius: BorderRadius.circular(8.0)),
+//               shadowColor: Colors.deepPurpleAccent,
+//               child: Row(
+//                 children: [
+//                   const Icon(
+//                     Icons.business_sharp,
+//                     size: 40.5,
+//                   ),
+//                   TextButton(onPressed: () {}, child: const Text("About Us")),
+//                 ],
+//               )),
+//           Card(
+//               margin: const EdgeInsets.all(10.0),
+//               shape: RoundedRectangleBorder(
+//                   side: const BorderSide(color: Colors.red, width: 2),
+//                   borderRadius: BorderRadius.circular(8.0)),
+//               shadowColor: Colors.deepPurpleAccent,
+//               child: Row(
+//                 children: [
+//                   const Icon(
+//                     Icons.business_sharp,
+//                     size: 40.5,
+//                   ),
+//                   TextButton(
+//                       onPressed: () {}, child: const Text("Refer & Earn")),
+//                 ],
+//               )),
+//           FloatingActionButton(
+//             onPressed: () {},
+//             child: const Icon(Icons.settings),
+//           )
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+// class _HomeState extends State<Home> {
+//   int activeIndex = 0;
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       drawer: const NavBar(),
+//       appBar: AppBar(
+//         // title: Icon(Icons.navigate_next),
+//         title: const Text("Sre -A online platform"),
+//         leading: IconButton(
+//             onPressed: () => const NavBar(),
+//             icon: const Icon(Icons.view_compact_rounded)),
+//         actions: [
+//           IconButton(onPressed: () {}, icon: const Icon(Icons.notifications)),
+//           IconButton(onPressed: () {}, icon: const Icon(Icons.shopping_cart)),
+//           IconButton(
+//               onPressed: () {
+//                 Navigator.push(
+//                     context, MaterialPageRoute(builder: (context) => Login()));
+//               },
+//               icon: const Icon(Icons.account_circle)),
+//         ],
+//       ),
+
+//       // body: Image.asset("assets/us.jpg"),
+//       body: ListView(
+//         children: [
+//           CarouselSlider(
+//               items: [
+//                 Image.asset("img/try1.jpg"),
+//                 Image.asset("img/try2.jpg"),
+//                 Image.asset("img/try3.jpg")
+//               ],
+//               options: CarouselOptions(
+//                   onPageChanged: (index, reason) {
+//                     setState(() {
+//                       activeIndex += 1;
+//                     });
+//                   },
+//                   pageSnapping: true,
+//                   viewportFraction: 1,
+//                   height: 300.0,
+//                   enlargeCenterPage: true,
+//                   autoPlay: true,
+//                   enlargeStrategy: CenterPageEnlargeStrategy.height)),
+//           Center(
+//             child:
+//                 AnimatedSmoothIndicator(activeIndex: activeIndex % 3, count: 3),
+//           ),
+//           const Text(
+//             "We are leading one in this field.",
+//             style: TextStyle(
+//                 fontSize: 25.2,
+//                 fontWeight: FontWeight.w300,
+//                 color: Colors.redAccent),
+//           ),
+//           const Divider(
+//             height: 80.0,
+//           ),
+//           const Text(
+//             "Our recomended Products",
+//             style:
+//                 TextStyle(decoration: TextDecoration.underline, fontSize: 25.0),
+//           ),
+//           const Card()
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+
+
+
+
+
+
+
+TODO:drop down
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+ 
+void main() {
+  runApp(MyApp());
+}
+//void main() => runApp(MyApp());
+class MyApp extends StatefulWidget {
+  @override
+  _MyState createState() => _MyState();
+}
+class _MyState extends State<MyApp>
+{
+  int _value = 1;
+  final List<int> list_items = <int>[1, 2, 3];
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.green,
+          title: Text("Flutter Dropdown Button Tutorial"),
+        ),
+        body:Container(
+          padding: EdgeInsets.all(20),
+          child:DropdownButton(
+            value: _value,
+            items: list_items.map((int item) {
+              return DropdownMenuItem<int>(
+                child: Text('Log $item'),
+                value: item,
+              );
+            }).toList(),
+ 
+            onChanged: (int value) {
+              setState(() {
+                _value = value;
+              });
+            },
+            ),
+          )
+        )
+    );
+  }
+}
